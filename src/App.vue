@@ -1,13 +1,24 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
+    <m-header></m-header>
+    
     <router-view></router-view>
+    <m-footer></m-footer>
+    <personal-info></personal-info>
   </div>
 </template>
 
 <script>
+import MHeader from './components/MHeader'
+import MFooter from './components/MFooter'
+import PersonalInfo from './pages/PersonalInfo'
 export default {
-  name: 'app'
+  name: 'app',
+  components:{
+    MHeader,
+    PersonalInfo,
+    MFooter
+  }
 }
 </script>
 
@@ -18,6 +29,5 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
 }
 </style>
